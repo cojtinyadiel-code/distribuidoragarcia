@@ -1,28 +1,25 @@
-Write-Host "Auto Sync Git iniciado. Detectando cambios..."
+$repoPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+Set-Location $repoPath
 
-$repo = Get-Location
-
-# Hash previo del último commit
-$lastHash = git rev-parse HEAD
+Write-Host "🔄 Auto-sync iniciado en: $repoPath"
+Write-Host "Presiona CTRL + C para detener..."
+Write-Host ""
 
 while ($true) {
-    # Si hay cambios reales en el repositorio
-    $status = git status --porcelain
 
-    if ($status) {
-        Write-Host "`nCambios detectados. Subiendo a GitHub..."
+    # Detectar cambios:
+    $changes = git status --porcelain
+
+    if ($changes) {
+        Write-Host "📌 Cambios detectados. Subiendo..."
 
         git add .
-
-        git commit -m "Auto-commit"
-
+        git commit -m "Auto-sync: actualización automática"
         git push
 
-        Write-Host "Cambios subidos correctamente."
-
-        # Actualizar hash
-        $lastHash = git rev-parse HEAD
+        Write-Host "✔ Cambios sincronizados."
+        Write-Host ""
     }
 
-    Start-Sleep -Seconds 3  # Tiempo entre verificaciones
+    Start-Sleep -Seconds 3
 }
