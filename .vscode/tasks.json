@@ -2,20 +2,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Auto Git Sync",
+            "label": "Auto Git Sync Interval",
             "type": "shell",
             "command": "powershell.exe",
             "args": [
-                "-ExecutionPolicy",
-                "Bypass",
-                "-File",
-                "${workspaceFolder}\\auto-sync.ps1"
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}\\auto-sync.ps1"
             ],
-            "problemMatcher": [],
             "isBackground": true,
             "runOptions": {
                 "runOn": "folderOpen"
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
+
