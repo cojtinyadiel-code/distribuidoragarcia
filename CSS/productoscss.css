@@ -300,16 +300,15 @@
     }
 
     .search-container button {
-    background-color: #0056b3;
+    background: linear-gradient(to right, #1E3A8A, #DC2626);
     border: none;
     color: white;
     padding: 10px 20px;
-    margin-left: 10px;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
     }
 
     .search-container button:hover {
-    background-color: #003d80;
+    background-color: #0051a8;
     }
