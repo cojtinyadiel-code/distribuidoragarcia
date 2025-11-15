@@ -297,6 +297,7 @@
     font-size: 16px;
     background-color: #e6f0ff; 
     color: #003366;
+    font-family: sans-serif;
     }
 
     .search-container button {
@@ -304,11 +305,11 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
     }
 
     .search-container button:hover {
-    background-color: #0051a8;
+    background-color: #c4c4c4;
     }
