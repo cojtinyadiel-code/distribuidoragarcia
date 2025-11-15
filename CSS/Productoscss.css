@@ -23,14 +23,7 @@
         /* =========================
         ENCABEZADO Y NAVEGACIÓN
         ========================= */
-        header {
-            background: linear-gradient(to right, #1E3A8A, #DC2626);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
+
         
         .contenido-encabezado {
             display: flex;
