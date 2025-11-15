@@ -277,7 +277,7 @@
             }
         }
 
-  .search-container {
+    .search-container {
     display: flex;
     align-items: center;
     width: 400px;
@@ -285,9 +285,9 @@
     border-radius: 30px;
     padding: 5px 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
+    }
 
-  .search-container input {
+    .search-container input {
     flex: 1;
     border: none;
     outline: none;
@@ -296,9 +296,9 @@
     font-size: 16px;
     background-color: #e6f0ff; /* Azul claro dentro del input */
     color: #003366;
-  }
+    }
 
-  .search-container button {
+    .search-container button {
     background-color: #0056b3;
     border: none;
     color: white;
@@ -307,8 +307,8 @@
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+    }
 
-  .search-container button:hover {
+    .search-container button:hover {
     background-color: #003d80;
   }
