@@ -1,3 +1,6 @@
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+
 $repoPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $repoPath
 
