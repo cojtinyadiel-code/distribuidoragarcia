@@ -8,15 +8,9 @@ Write-Host "Auto-sync iniciado en: $repoPath"
 Write-Host "Presiona CTRL + C para detenerlo..."
 Write-Host ""
 
-# Último estado commit
-$lastHash = ""
-
 while ($true) {
 
-    # Obtener hash actual
-    $currentHash = git rev-parse HEAD
-
-    # Detectar cambios sin hacer commit
+    # Detectar cambios sin commit
     $changes = git status --porcelain
 
     if ($changes) {
