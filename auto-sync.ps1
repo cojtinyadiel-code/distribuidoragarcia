@@ -1,6 +1,6 @@
 Write-Host "Auto Sync Git iniciado. Detectando cambios..."
 
-$repo = (Get-Location
+$repo = Get-Location
 
 # Hash previo del último commit
 $lastHash = git rev-parse HEAD
