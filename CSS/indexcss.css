@@ -6,6 +6,7 @@
         }
         
         body {
+            box-sizing: border-box;
             background-color: #f9f9f9; 
             color: #333; 
             line-height: 1.6; 
@@ -103,7 +104,7 @@
         
         .boton {
             margin: auto;
-            display: inline-block;
+            display: inline-flex;
             background-color: #DC2626;
             color: white;
             padding: 12px 25px;
