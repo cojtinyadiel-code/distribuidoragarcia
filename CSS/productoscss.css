@@ -307,14 +307,8 @@
     border: 1px solid #1E3A8A;
     margin-left: 40px;
     color: #1E3A8A;
-    padding: 5px 10px;
     border-radius: 4px;
     font-weight: 600;
-    }
-
-    .search-container button:hover {
-    margin-left:auto;
-    background-color:#ffffff;
     }
 
     .filter[:open]{
