@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Hilos</title>
+
+<style>
+
+
+    body {
+        background:#ffffff00;
+        color:#eee;
+        font-family:Arial;
+        padding:20px;
+        display: flex;
+    }
+
+    /* Tarjetas */
+    .tarjeta-producto {
+
+        width:230px;
+        background:#1c1c1c;
+        padding:15px;
+        border-radius:12px;
+        cursor:pointer;
+        border:1px solid #333;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        margin-bottom:20px;
+        background:linear-gradient(to right, #162c68, #7a1818);
+    }
+
+    .tarjeta-producto:hover { 
+        background:linear-gradient(to right, #2851bb, #d62626);
+    }
+
+    .imagen-producto {
+        width:100%;
+        height:150px;
+        background:#333;
+        color:#ccc;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:8px;
+        font-size:16px;
+    }
+
+    .imagen-producto img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        border-radius:5px;
+    }
+
+    .info-producto h3 { 
+        margin:0;
+    }
+
+    .info-producto p { 
+        margin:0; 
+        color:#aaa;
+    }
+
+    /* Modal */
+    .modal-fondo {
+        display:none;
+        position:fixed;
+        top:0; left:0;
+        width:100%; 
+        height:100%;
+        background:linear-gradient(to right, #1e3b8a67, #dc26263f);
+        justify-content:center;
+        align-items:center;
+        padding:23px;
+
+    }
+
+    .modal {
+        background:linear-gradient(to right, #172e69, #701414);;
+        padding:25px;
+        border-radius:12px;
+        height: auto;
+        min-width:350px;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .modal img {
+
+        margin: auto;
+        border: 1px solid #510664;
+        max-height: 200px;
+        border-radius:8px;
+        margin-bottom:10px;
+
+        
+    }
+
+    .variantes {
+
+        display:flex;
+        gap:10px;
+        margin-top:10px;
+    }
+
+    .var-opcion {
+        background-color: #c72727;
+        width:55px;
+        height:55px;
+        border-radius:6px;
+        cursor:pointer;
+        border:2px solid transparent;
+    }
+
+    .var-opcion img {
+        max-width: 52px;
+        border-radius:6px;
+
+    }
+
+    .var-opcion.seleccionada {
+        background-color: #701414;
+    }
+
+    .btn-cerrar {
+        margin-top:15px;
+        width:100%;
+        padding:10px;
+        background:#333;
+        border:none;
+        color:#fff;
+        border-radius:8px;
+        cursor:pointer;
+    }
+
+    .btn-cerrar:hover {
+        background:#444;
+    }
+
+
+</style>
+</head>
+<body>
+
+<h2> Productos</h2>
+
+
+
+<!-- ===============================
+     TARJETAS (puedes agregar 80, 100 o más)
+================================== -->
+<br><br><br>
+<div class="tarjeta-producto" id="producto1" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+    <div class="imagen-producto" >
+        <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+    </div>
+    <div class="info-producto">
+        <h3>Ovillos Algodón</h3>
+        <p>Suaves y resistentes.</p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto2" data-nombre="Hilo Fino Premium" data-precio="12.90">
+    <div class="imagen-producto">
+        <img src="images/Alfileres.jpg">
+    </div>
+    <div class="info-producto">
+        <h3>Hilo Fino</h3>
+        <p>Ideal para detalles delicados.</p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+    <div class="imagen-producto">
+        <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+    </div>
+    <div class="info-producto">
+        <h3>Ovillos Algodón</h3>
+        <p>Suaves y resistentes.</p>
+    </div>
+</div>
+
+
+
+<!-- ===============================
+     MODAL (solo uno para todo el sistema)
+================================== -->
+<div class="modal-fondo" id="modalCompra">
+    <div class="modal">
+        <img id="modalImg" src="" style="margin: auto; display: grid;">
+        <h3 id="modalNombre"></h3>
+        <p id="modalPrecio"></p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="modalCantidad" min="1" value="1">
+
+        <h4>Variantes:</h4>
+        <div class="variantes" id="listaVariantes"></div>
+
+        <button class="btn-cerrar" id="cerrarModal">Cerrar</button>
+    </div>
+</div>
+
+
+
+<!-- ===============================
+     JAVASCRIPT AUTOMATIZADO
+================================== -->
+<script>
+/* Variantes con mini-imágenes */
+const variantesProducto = {
+
+    "producto1": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+
+    "producto2": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F1",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F2",
+            precio: 13.50
+        }
+    ],
+        "producto3": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F3",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F3",
+            precio: 13.50
+        }
+    ],
+        "producto3": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F4",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F4",
+            precio: 13.50
+        }
+    ]
+};
+
+
+// Elementos del modal
+const modal = document.getElementById("modalCompra");
+const modalImg = document.getElementById("modalImg");
+const modalNombre = document.getElementById("modalNombre");
+const modalPrecio = document.getElementById("modalPrecio");
+const listaVariantes = document.getElementById("listaVariantes");
+const cerrarModal = document.getElementById("cerrarModal");
+
+
+// =======================================
+// SISTEMA AUTOMÁTICO PARA TODAS LAS TARJETAS
+// =======================================
+document.querySelectorAll(".tarjeta-producto").forEach(tarjeta => {
+
+    tarjeta.addEventListener("click", () => {
+        const id = tarjeta.id;
+        const nombre = tarjeta.dataset.nombre;
+        const precio = tarjeta.dataset.precio;
+
+        // Cargar imagen principal de la tarjeta
+        const img = tarjeta.querySelector(".imagen-producto img").src;
+        modalImg.src = img;
+
+        modalNombre.textContent = nombre;
+        modalPrecio.textContent = `Precio: $${precio}`;
+
+        listaVariantes.innerHTML = "";
+
+        // Variantes por producto
+        if (variantesProducto[id]) {
+
+            variantesProducto[id].forEach((v, index) => {
+                const btn = document.createElement("div");
+                btn.classList.add("var-opcion");
+
+                btn.innerHTML = `<img src="${v.imgMini}">`;
+
+                if (index === 0) {
+                    btn.classList.add("seleccionada");
+                    modalImg.src = v.imgGrande;
+                    modalPrecio.textContent = `Precio: $${v.precio}`;
+                }
+
+                btn.addEventListener("click", () => {
+                    document.querySelectorAll(".var-opcion").forEach(el => el.classList.remove("seleccionada"));
+                    btn.classList.add("seleccionada");
+
+                    modalImg.src = v.imgGrande;
+                    modalPrecio.textContent = `Precio: $${v.precio}`;
+                });
+
+                listaVariantes.appendChild(btn);
+            });
+        }
+
+        modal.style.display = "flex";
+    });
+});
+
+
+// Cerrar modal
+cerrarModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+</script>
+
+</body>
+</html>

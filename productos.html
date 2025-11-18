@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DGH Distribuidora Hermanos García - Productos</title>
-    <script> src="js/js1.js"</script>
     <link rel="stylesheet" href="CSS/productoscss.css">
 
 <body>
@@ -14,7 +13,7 @@
     <header>
         <div class="contenedor contenido-encabezado">
             <div class="logo">
-                <div class="logo-circulo">DGH</div>
+                <a href=""><div class="logo-circulo">DGH</div></a>
                 <div class="texto-logo">Distribuidora Hermanos García</div>
             </div>
             <nav>
@@ -26,6 +25,25 @@
             </nav>
         </div>
     </header>
+
+    <!-- =========================
+     el menu desplegable jusjas
+    ========================= -->   
+<div id="boton-menu" onclick="abrirMenu()" >☰</div>
+<div id="menu-lateral">
+    <a href="javascript:void(0)" class="cerrar" onclick="cerrarMenu()">×</a>
+    <h3>Menú</h3>
+    <a href="productos.html">📦&nbsp;Productos</a>
+    <a href="contactanos.html">☎️&nbsp;Contáctanos</a>
+    <h3>Todos los productos</h3>
+    <a href="telas" class="link-vinieta">Telas</a>
+    <a href="lanas.html" class="link-vinieta"> Lanas</a>
+    <a href="hilos.html" class="link-vinieta"> Hilos</a>
+    <a href="ovillos.html" class="link-vinieta"> Ovillos</a>
+    <a href="agujas.html" class="link-vinieta"> Agujas</a>
+    <a href="accesorios.html" class="link-vinieta"> Accesorios</a>
+</div>
+<div id="fondo-menu" onclick="cerrarMenu()"></div>
 
     <!-- =========================
          HERO / PORTADA
@@ -64,1122 +82,224 @@
                 <button type="submit">Buscar</button>
             </form>
 
-            <div class="rejilla-productos">
-                <div class="tarjeta-producto">
-                    <div class="imagen-pr</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">Tela de algodon</h3>
-                        <p>Tela 100% algodón para confección de ropa y proyectos textiles.</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen de Tela Seda</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">Tela de Seda</h3>
-                        <p>Tela de seda natural para prendas elegantes y proyectos especiales.</p>
-                        <div class="precio-producto">$29.99/yd</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen de Lana Merino</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">Lana Merino</h3>
-                        <p>Lana de oveja merino de alta calidad para tejido y crochet.</p>
-                        <div class="precio-producto">$12.99/ovillo</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen de Lana Acrílica</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">Lana Acrílica</h3>
-                        <p>Lana acrílica suave y resistente, disponible en múltiples colores.</p>
-                        <div class="precio-producto">$8.99/ovillo</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen de Hilo Algodón</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">Hilo de Algodón</h3>
-                        <p>Hilo 100% algodón para costura y bordado.</p>
-                        <div class="precio-producto">$3.99/carretel</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen de Hilo Poliéster</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">Hilo de Poliéster</h3>
-                        <p>Hilo resistente de poliéster para costura general.</p>
-                        <div class="precio-producto">$2.99/carretel</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen de Agujas</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">Agujas de Tejer</h3>
-                        <p>Set de agujas de tejer de diferentes medidas y materiales.</p>
-                        <div class="precio-producto">$14.99/set</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen de Tijeras</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">Tijeras Profesionales</h3>
-                        <p>Tijeras de alta calidad para corte de tela y materiales textiles.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="tiutlo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div> 
-                      
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div> 
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>       
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>          
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="tiutlo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>   
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3  class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>   
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-
-                </div>       
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>      
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>   
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>   
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>   
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>   
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>    
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>       
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>      
-
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-                  
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-                  
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-                     
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>   
-                    
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>       
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>      
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>  
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div> 
-                
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-    
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>      
-                 
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-       
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-                       
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-       
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-       
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>       
-                    
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>         
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>       
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>       
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>      
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-                
-                
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>     
-
-                 
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                    
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                   
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                 
-                 <div class="tarjeta-producto">
-                    <div class="imagen-producto">A</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">A</h3>
-                        <p>jsjsjsjs.</p>
-                        <div class="precio-producto">$24.99/par</div>
-                    </div>
-                </div>
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-                    
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>  
-
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>
-
-
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-producto">Imagen</div>
-                    <div class="info-producto">
-                        <h3 class="titulo">a</h3>
-                        <p>s</p>
-                        <div class="precio-producto">$15.99/yd</div>
-                    </div>
-                </div>  
+            <h2> Productos</h2>
 
 
+
+<!-- ===============================
+     TARJETAS (puedes agregar 80, 100 o más)
+================================== -->
+<br><br><br>
+<section id="allproducts" style="display: inline-block;">
+
+
+    <div class="tarjeta-producto" id="producto1" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto" >
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto2" data-nombre="Hilo Fino Premium" data-precio="12.90">
+        <div class="imagen-producto">
+            <img src="images/Alfileres.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Hilo Fino</h3>
+            <p>Ideal para detalles delicados.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="tarjeta-producto" id="producto4" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+
+    <div class="tarjeta-producto" id="producto5" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+
+    <div class="tarjeta-producto" id="producto6" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+    <div class="tarjeta-producto" id="producto3" data-nombre="Ovillos 100% Algodón" data-precio="18.50">
+        <div class="imagen-producto">
+            <img src="images/aguja chaquira pony/aguja-chaquira-no-12.jpg">
+        </div>
+        <div class="info-producto">
+            <h3>Ovillos Algodón</h3>
+            <p>Suaves y resistentes.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+<!-- ===============================
+     MODAL (PESTAÑA DE COMPRA ABIERTA) (solo uno para todo producto)
+================================== -->
+<div class="modal-fondo" id="modalCompra">
+    <div class="modal">
+        <img id="modalImg" src="" style="margin: auto; display: grid;">
+        <h3 id="modalNombre"></h3>
+        <p id="modalPrecio"></p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="modalCantidad" min="1" value="1">
+
+        <h4>Variantes:</h4>
+        <div class="variantes" id="listaVariantes"></div>
+
+        <button class="btn-cerrar" id="cerrarModal">Cerrar</button>
+    </div>
+</div>
+</section>
 
                 </div>            
     </section>
@@ -1197,5 +317,8 @@
             </div>
         </div>
     </footer>
+    <script src="JS/menus.js"></script>
+    <script src="JS/js1.js"></script>
+    <script src="JS/01-modalproducts.js"></script>
 </body>
 </html>

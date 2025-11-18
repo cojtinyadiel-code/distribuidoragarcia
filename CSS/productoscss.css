@@ -157,46 +157,6 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
         }
-        
-        .tarjeta-producto {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .tarjeta-producto:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .imagen-producto {
-            height: 180px;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-            font-weight: bold;
-        }
-        
-        .info-producto {
-            padding: 20px;
-        }
-        
-        .info-producto h3 {
-            color: #1E3A8A;
-            margin-bottom: 10px;
-        }
-        
-        .precio-producto {
-            color: #DC2626;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-        
         /* =========================
         SECCIÓN DE CATEGORÍAS
         ========================= */
@@ -277,6 +237,77 @@
             }
         }
 
+
+ /*===============================
+   MENÚ DESPLEGABLE
+================================*/
+#boton-menu {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: white;
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    z-index: 999;
+}
+#menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1E3A8A;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+#menu-lateral a {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+#menu-lateral a:hover {
+    background-color: #2d4fb3;
+}
+#menu-lateral h3 {
+    color: #ffefef;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#menu-lateral .cerrar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+}
+#fondo-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 900;
+}
+.link-vinieta::before{
+    content:"•";
+    color:white;
+    margin-right: 6px;
+    font-size: 18px;
+}
+/*===============================
+aqui termina el css del menu
+================================*/
+/*
+BUSCADOR DE "PRODUCTOS"
+*/
     .search-container {
     margin: auto;
     box-sizing: border-box;
@@ -314,3 +345,138 @@
     .filter[:open]{
         border:3px solid linear-gradient(to bottom);
     }
+
+
+/* Tarjetas DE PRODUCTOS y funcionalidad de variantes (MODALES)*/
+
+
+#allproducts{
+    margin: auto;
+}
+
+.tarjeta-producto {
+    width: 230px;
+    height: 275px;
+        margin: auto 30px;
+        width:230px;
+        background:#1c1c1c;
+        padding:15px;
+        border-radius:12px;
+        cursor:pointer;
+        border:1px solid #333;
+        gap:10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom:20px;
+        background:linear-gradient(to right, #162c68, #7a1818);
+    }
+
+    .tarjeta-producto:hover { 
+        background:linear-gradient(to right, #2851bb, #d62626);
+    }
+
+    .imagen-producto {
+        width:100%;
+        height:150px;
+        background:#333;
+        color:#ccc;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:8px;
+        font-size:16px;
+    }
+
+    .imagen-producto img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        border-radius:5px;
+    }
+
+    .info-producto h3 { 
+        margin:0;
+        color: #ffffff;
+    }
+
+    .info-producto p { 
+        margin:0; 
+        color:#aaa;
+    }
+
+    /* Modal */
+    .modal-fondo {
+        display:none;
+        position:fixed;
+        top:0; left:0;
+        width:100%; 
+        height:100%;
+        background:linear-gradient(to right, #1e3b8a67, #dc26263f);
+        justify-content:center;
+        align-items:center;
+        padding:23px;
+
+    }
+
+    .modal {
+        background:linear-gradient(to right, #172e69, #701414);;
+        padding:25px;
+        border-radius:12px;
+        height: auto;
+        min-width:350px;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .modal img {
+
+        margin: auto;
+        border: 1px solid #510664;
+        max-height: 200px;
+        border-radius:8px;
+        margin-bottom:10px;
+
+        
+    }
+
+    .variantes {
+
+        display:flex;
+        gap:10px;
+        margin-top:10px;
+    }
+
+    .var-opcion {
+        background-color: #c72727;
+        width:55px;
+        height:55px;
+        border-radius:6px;
+        cursor:pointer;
+        border:2px solid transparent;
+    }
+
+    .var-opcion img {
+        max-width: 52px;
+        border-radius:6px;
+
+    }
+
+    .var-opcion.seleccionada {
+        background-color: #701414;
+    }
+
+    .btn-cerrar {
+        margin-top:15px;
+        width:100%;
+        padding:10px;
+        background:#333;
+        border:none;
+        color:#fff;
+        border-radius:8px;
+        cursor:pointer;
+    }
+
+    .btn-cerrar:hover {
+        background:#444;
+    }
+
