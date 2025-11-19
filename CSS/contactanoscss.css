@@ -299,4 +299,70 @@
                 grid-template-columns: 1fr;
             }
         }
-    
+    /*===============================
+   MENÚ DESPLEGABLE
+================================*/
+#boton-menu {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: white;
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    z-index: 999;
+}
+#menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1E3A8A;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+#menu-lateral a {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+#menu-lateral a:hover {
+    background-color: #2d4fb3;
+}
+#menu-lateral h3 {
+    color: #ffefef;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#menu-lateral .cerrar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+}
+#fondo-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 900;
+}
+.link-vinieta::before{
+    content:"•";
+    color:white;
+    margin-right: 6px;
+    font-size: 18px;
+}
+/*===============================
+aqui termina el css del menu
+================================*/

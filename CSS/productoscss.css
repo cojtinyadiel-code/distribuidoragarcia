@@ -322,7 +322,7 @@ BUSCADOR DE "PRODUCTOS"
     align-items: center;
 }
 
-/* INPUT */
+
 .search-container input {
     flex: 1;
     padding: 10px 15px;
@@ -339,7 +339,7 @@ BUSCADOR DE "PRODUCTOS"
     box-shadow: 0 0 8px rgba(255,255,255,0.7);
 }
 
-/* SELECT */
+
 .filter {
     padding: 10px;
     border: none;
@@ -356,7 +356,6 @@ BUSCADOR DE "PRODUCTOS"
     transform: scale(1.05);
 }
 
-/* BOTÓN */
 .search-container button {
     padding: 10px 16px;
     background: #ffffff;
@@ -374,7 +373,7 @@ BUSCADOR DE "PRODUCTOS"
     transform: scale(1.08);
 }
 
-/* MOBILE */
+
 @media (max-width: 480px) {
     .search-container {
         flex-direction: column;
@@ -386,10 +385,7 @@ BUSCADOR DE "PRODUCTOS"
     }
 }
 
-
-
 /* Tarjetas DE PRODUCTOS y funcionalidad de variantes (MODALES)*/
-
 
 #allproducts{
     margin: auto;
