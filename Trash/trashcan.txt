@@ -1,0 +1,10 @@
+    <div class="botones-categorias">
+                <button class="boton-categoria activo">Todos</button>
+                <button class="boton-categoria">Telas</button>
+                <button class="boton-categoria">Lanas</button>
+                <button class="boton-categoria">Hilos</button>
+                <button class="boton-categoria">Accesorios</button>
+            </div>
+
+
+            <h2> Productos</h2>

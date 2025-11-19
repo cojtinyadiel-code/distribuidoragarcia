@@ -1,0 +1,10 @@
+:root{--bg:#f5f7fb;--card:#fff;--accent:#1a73e8}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);margin:0;padding:24px}
+.checkout{display:grid;grid-template-columns:1fr 360px;gap:20px;max-width:1100px;margin:0 auto}
+.checkout__form .btn{background:var(--accent);color:#fff;padding:12px 16px;border:0;border-radius:8px}
+.checkout__summary{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.checkout__form{background:var(--card);padding:20px;border-radius:10px}
+fieldset{border:1px solid #e6e9ee;padding:12px;margin-bottom:12px;border-radius:8px}
+.small-row{display:flex;gap:10px}
+@media (max-width:880px){.checkout{grid-template-columns:1fr}}
