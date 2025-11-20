@@ -292,6 +292,8 @@
                 </div>            
     </section>
 
+
+
     <!-- =========================
     FOOTER
     ========================= -->
@@ -305,6 +307,24 @@
             </div>
         </div>
     </footer>
+
+<!--=========================
+    carrito de compras
+===========================-->
+<button id="btnCarrito" class="btn-carrito">🛒</button>
+<div id="carrito-overlay" class="carrito-overlay"></div>
+<div id="carrito-panel" class="carrito-panel">
+    <div class="carrito-header">
+        <h2>Tu Carrito</h2>
+        <button id="cerrarCarrito" class="cerrar-icon">✕</button>
+    </div>
+    <div id="carrito-items" class="carrito-items"></div>
+    <div class="carrito-footer">
+        <p>Total: <span id="carrito-total">Q0.00</span></p>
+        <button class="carrito-pagar">Pagar</button>
+    </div>
+</div>
+
     <script src="JS/menus.js"></script>
     <script src="JS/js1.js"></script>
     <script src="JS/01-modalproducts.js"></script>
