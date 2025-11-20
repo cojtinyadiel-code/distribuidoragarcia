@@ -17,7 +17,7 @@
         }
         
         body {
-            background: #0000001f;
+            background-color: #ffffff;
             color: #333;
             line-height: 1.6;
         }
@@ -91,7 +91,7 @@
         ========================= */
         .seccion-hero {
             background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(220, 38, 38, 0.7)), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f0f0"/><path d="M0 0L100 100" stroke="%23ddd" stroke-width="2"/><path d="M100 0L0 100" stroke="%23ddd" stroke-width="2"/></svg>');
+            url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f0f0"/><path d="M0 0L100 100" stroke="%23ddd" stroke-width="2"/><path d="M100 0L0 100" stroke="%23ddd" stroke-width="2"/></svg>');
             background-size: cover;
             color: white;
             text-align: center;
@@ -140,6 +140,8 @@
             color: #1E3A8A;
             font-size: 2.2rem;
             position: relative;
+            text-shadow: 4px 2px 4px rgb(255, 255, 255); 
+
         }
         
         .titulo-seccion::after {
@@ -162,7 +164,7 @@
         ========================= */
         .categorias {
             padding: 40px 0;
-            background-color: #0000001f;
+            background-color: #ffffff;
         }
         
         .botones-categorias {
@@ -262,6 +264,9 @@
     transition: 0.4s;
     padding-top: 60px;
     z-index: 1000;
+    box-sizing: border-box;
+    border-radius: 8px 0 0 8px;
+    border-right: 3px solid #ffefef; 
 }
 #menu-lateral a {
     padding: 12px 20px;
@@ -274,6 +279,7 @@
 }
 #menu-lateral a:hover {
     background-color: #2d4fb3;
+    border-left: 3px solid #ffefef; 
 }
 #menu-lateral h3 {
     color: #ffefef;
@@ -399,24 +405,25 @@ BUSCADOR DE "PRODUCTOS"
 
 
 .tarjeta-producto {
-    border: 0.5px solid rgb(180, 180, 180);
-    width: 230px;
-    height: 275px;
-    background: linear-gradient(to right, #162c68, #7a1818);
+    width: 270px;
+    height: 340px;
+    background: #ffffff;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 10px;
     transform: translateY(+8px);
     transition: 0.4s ease;
-    margin: 25px;
+    margin: 5px;
     border-radius: 8px;
+    box-shadow: 0 0 30px 2px rgba(168, 168, 168, 0.884);
 }
 
 
 .tarjeta-producto:hover { 
-    background: linear-gradient(to right, #2851bb, #d62626);
-    transform: scale(1.03);
+    transform: translateY(-8px);
+    transition: 0.4s ease;
+
     box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.467);
 }
 
@@ -427,13 +434,37 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .imagen-producto {
-    background: #ffffff ;
+    background: transparent;
     width: 100%;
-    height: 150px;
+    height: 55%;
     display: flex;
     font-size: 16px;
     border-radius: 8px;
 }
+
+.img-shadow{
+    position: relative;
+    width: 300px;
+    border-radius: 10px;
+    border-bottom-right-radius:none ;
+    border-bottom-left-radius:none ;
+}
+
+.img-shadow img{
+    width: 100%;
+    display: block;
+
+}
+
+.img-shadow::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+
 #modalCantidad{
     max-width: 50px;
     border-radius: 5px;
@@ -458,13 +489,12 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 20px;
     margin-top:10px;
     margin-bottom: 0;
-    color: #ffffff;
+    color: #1E3A8A;
 }
 
 .info-producto p { 
     margin: 0 15px; 
-    color: #b3b3b3;
-    font-weight: 700;
+    color: #000000b7;
 }
 
 .modal-fondo {
@@ -473,7 +503,7 @@ input[type=number]::-webkit-outer-spin-button {
     top: 0; left: 0;
     width: 100%; 
     height: 100%;
-    background: rgba(0, 0, 0, 0.288);
+    background: rgb(255, 255, 255)0.288);
     justify-content: center;
     align-items: center;
     padding: 23px;
@@ -534,10 +564,11 @@ input[type=number]::-webkit-outer-spin-button {
     background: #ffffff;
     border: 2px solid #1E3A8A;
 }
+
+
 /*===============================
 el carrito jusjas
 ================================*/
-
 .carrito-overlay {
     display: none;
     position: fixed;
@@ -558,11 +589,11 @@ el carrito jusjas
     right: -350px;
     width: 320px;
     height: 100%;
-    background: #0a1f44;
+    background:  #1E3A8A;
     z-index: 1000;
     padding: 20px;
     box-sizing: border-box;
-    border-left: 3px solid #1c4bff;
+    border-left: 3px solid #ffefef;
     border-radius: 8px 0 0 8px;
     box-shadow: -4px 0 15px rgba(0,0,0,0.25);
     transition: 0.35s ease-in-out;
@@ -649,7 +680,6 @@ el carrito jusjas
     background: #163dcc;
 }
 
-
 .btn-carrito {
     position: fixed;
     top: 100px;
@@ -665,9 +695,21 @@ el carrito jusjas
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     transition: 0.3s;
 }
+
 .btn-carrito:hover {
     background: #163dcc;
     transform: scale(1.07);
 }
 
+.panel-front{
+    width: 100%;
+    background: black;
+}
 
+.lista-carrito{
+    color: white;
+    padding: 10px 20px;
+    text-decoration: underline;
+    position: relative;
+    font-size: 15px;
+}

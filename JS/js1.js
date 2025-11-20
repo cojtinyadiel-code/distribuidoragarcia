@@ -1,3 +1,4 @@
+
 function filtrar(){
     let texto= document.getElementById("filtro").value.toLowerCase();
     let prodcutos= DocumentFragment.getElementById("productos").value;
