@@ -37,7 +37,7 @@ const variantesProducto = {
             precio: 13.50
         }
     ],
-        "producto3": [
+        "producto4": [
         { 
             imgMini: "images/aguja chaquira pony",
             imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F4",
