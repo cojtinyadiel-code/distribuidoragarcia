@@ -264,7 +264,7 @@ BUSCADOR DE "PRODUCTOS"
 */
 .search-container {
     width: auto;
-    max-width: 700px;
+    max-width: 500px;
     margin: 20px auto;
     padding: 14px 20px;
     border-radius: 18px;
@@ -279,7 +279,7 @@ BUSCADOR DE "PRODUCTOS"
     margin-bottom: 5px;
     font-size:48px;
     font-weight: bold;
-    color: #294fb8;
+    color: #dbdbdbb9;
     text-shadow: 0 80px 2px white; 
 }
 
@@ -297,7 +297,6 @@ BUSCADOR DE "PRODUCTOS"
 }
 
 .search-container input:focus {
-
     box-shadow: 0 0 8px rgba(255,255,255,0.7);
 }
 
@@ -382,6 +381,8 @@ BUSCADOR DE "PRODUCTOS"
     margin: 5px;
     border-radius: 8px;
     box-shadow: 0 0 30px 2px rgba(168, 168, 168, 0.884);
+    text-align: center;
+
 }
 
 
@@ -478,21 +479,25 @@ input[type=number]::-webkit-outer-spin-button {
 
 .modal {
     background: rgb(255, 255, 255);
-    padding: 30px;
+    padding:20px;
     border-radius: 12px;
     min-width: 350px;
     box-shadow:0 0 30px 0.1px #797979;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;     
+    margin: 0 20px;
 }
 
 .modal img {
     max-height: 170px;
     border-radius: 8px;
 }
-.modal h3{
-    margin-top: 10px;
+.modal p label {
+    font-size:bold;
+}
+.represmodal{
+    text-align: center;
 }
 
 .variantes {
@@ -541,7 +546,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .btnmdl-carrito {
     margin-left: 10px;
-margin-right: 30px;
 }
 
 /*===============================
