@@ -1,4 +1,6 @@
+let carrito = [];
 const variantesProducto = {
+    
 
     "producto1": [
         { 
@@ -59,7 +61,15 @@ const modalNombre = document.getElementById("modalNombre");
 const modalPrecio = document.getElementById("modalPrecio");
 const listaVariantes = document.getElementById("listaVariantes");
 const cerrarModal = document.getElementById("cerrarModal");
+const btnAgregarCarrito = document.getElementById("btnAgregarCarrito");
 
+let productoActual = {
+    id: null,
+    nombre: null,
+    precio: null,
+    cantidad: 1,
+    variante: null
+};
 
 // =======================================
 // SISTEMA AUTOMÁTICO PARA TODAS LAS TARJETAS
@@ -67,9 +77,13 @@ const cerrarModal = document.getElementById("cerrarModal");
 document.querySelectorAll(".tarjeta-producto").forEach(tarjeta => {
 
     tarjeta.addEventListener("click", () => {
+
         const id = tarjeta.id;
         const nombre = tarjeta.dataset.nombre;
         const precio = tarjeta.dataset.precio;
+
+        productoActual.id = id;
+        productoActual.nombre = nombre;
 
         // Cargar imagen principal de la tarjeta
         const img = tarjeta.querySelector(".imagen-producto img").src;
@@ -93,9 +107,13 @@ document.querySelectorAll(".tarjeta-producto").forEach(tarjeta => {
                     btn.classList.add("seleccionada");
                     modalImg.src = v.imgGrande;
                     modalPrecio.textContent = `Precio: $${v.precio}`;
+
+                    productoActual.variante = v;
                 }
 
+
                 btn.addEventListener("click", () => {
+
                     document.querySelectorAll(".var-opcion").forEach(el => el.classList.remove("seleccionada"));
                     btn.classList.add("seleccionada");
 
@@ -109,10 +127,25 @@ document.querySelectorAll(".tarjeta-producto").forEach(tarjeta => {
 
         modal.style.display = "flex";
     });
+})
+
+btnAgregarCarrito.addEventListener("click", () => {
+    
+    productoActual.cantidad = parseInt(modalCantidad.value);
+
+    console.log("Producto añadido al carrito:", productoActual);
+
+    // En el futuro aquí se agregará:
+    // carrito.push({...productoActual})
+    // actualizarCarritoUI()
+
+    alert("Producto añadido al carrito ✔");
 });
+
 
 
 // Cerrar modal
 cerrarModal.addEventListener("click", () => {
     modal.style.display = "none";
 });
+  

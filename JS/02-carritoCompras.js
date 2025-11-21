@@ -19,34 +19,3 @@ function cerrarCarrito() {
     overlay.style.opacity = "0";
     setTimeout(() => overlay.style.display = "none", 300);
 }
-
-function agregarAlcarrito(producto){
-    carrito.push(producto);
-    total += producto.precio;
-    actualizarCarrito();
-}
- 
-function actualizarCarrito(){
-    const Listacarrito= Document.getElementById("Lista Carrito");
-    Listacarrito.inerHTML ="listaCarrito";
-}
- function eliminarDelCarrito(index){
-    total -= carrito[index].precio;
-    carrito.slaice(index,1);
-    actualizarCarrito();
- }
-function limpiarCarrito(){
-    carrito =[];
-    total = 0;
-    actualizarCarrito();
-    }
-function finalizarCompra(){
-    if(carrito.length === 0);
-    alert("El carrito esta vacio");
-    return;
-    else{
-        alert("Gracias por su compra de $" + total.toFixed (2));
-        limpiarCarrito();
-    }
-}
-

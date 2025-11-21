@@ -1,50 +1,47 @@
       /* =========================
            Estilos generales
         ========================= */
-        * {
+      * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box; 
             font-family: 'Arial', sans-serif;
         }
-
+        
         body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
+            box-sizing: border-box;
+            background-color: #f9f9f9; 
+            color: #333; 
+            line-height: 1.6; 
         }
-
-        /* Contenedor central */
+        
         .contenedor {
             width: 90%;
             max-width: 1200px;
-            margin:auto;
+            margin: 0 auto; 
         }
-
-        /* =========================
-           Header y navegación
-        ========================= */
+        
         header {
             background: linear-gradient(to right, #1E3A8A, #DC2626);
             padding: 15px 0;
-            position: sticky;
+            position: sticky; 
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
-
+        
         .contenido-encabezado {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; 
             align-items: center;
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
         }
-
-        .logo-placeholder {
+        
+        .logo-circulo {
             width: 60px;
             height: 60px;
             background-color: white;
@@ -57,22 +54,22 @@
             color: #1E3A8A;
             border: 2px solid #DC2626;
         }
-
-        .logo-texto {
+        
+        .texto-logo {
             color: white;
             font-size: 1.5rem;
             font-weight: bold;
         }
-
+        
         nav ul {
             display: flex;
-            list-style: none;
+            list-style: none; 
         }
-
+        
         nav ul li {
             margin-left: 20px;
         }
-
+        
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -81,9 +78,9 @@
             transition: background-color 0.3s;
             font-weight: bold;
         }
-
+        
         nav ul li a:hover {
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255, 255, 255, 0.2); 
         }
 
         /* =========================
@@ -91,7 +88,7 @@
         ========================= */
         .hero {
             background: linear-gradient(rgba(30,58,138,0.8), rgba(220,38,38,0.7)),
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f0f0"/><path d="M0 0L100 100" stroke="%23ddd" stroke-width="2"/><path d="M100 0L0 100" stroke="%23ddd" stroke-width="2"/></svg>');
+            url(/images/);
             background-size: cover;
             color: white;
             text-align: center;
@@ -254,6 +251,74 @@
             align-items: center;
         }
 
+        /*MENU DESPLEGABLE*/
+        #boton-menu {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px 15px;
+            color: white;
+            position: fixed;
+            left: 20px;
+            top: 15px;
+            z-index: 999;
+        }
+        #menu-lateral {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #1E3A8A;
+            overflow-x: hidden;
+            transition: 0.4s;
+            padding-top: 60px;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-radius: 8px 0 0 8px;
+            border-right: 3px solid #ffefef; 
+        }
+        #menu-lateral a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        #menu-lateral a:hover {
+            background-color: #2d4fb3;
+            border-left: 3px solid #ffefef; 
+        }
+        #menu-lateral h3 {
+            color: #ffefef;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        #menu-lateral .cerrar {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 36px;
+        }
+        #fondo-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 900;
+        }
+        .link-vinieta::before{
+            content:"•";
+            color:white;
+            margin-right: 6px;
+            font-size: 18px;
+        }
+
+
         /* =========================
            Footer
         ========================= */
@@ -301,68 +366,4 @@
         }
     /*===============================
    MENÚ DESPLEGABLE
-================================*/
-#boton-menu {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px 15px;
-    color: white;
-    position: fixed;
-    left: 20px;
-    top: 15px;
-    z-index: 999;
-}
-#menu-lateral {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #1E3A8A;
-    overflow-x: hidden;
-    transition: 0.4s;
-    padding-top: 60px;
-    z-index: 1000;
-}
-#menu-lateral a {
-    padding: 12px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-    font-weight: bold;
-}
-#menu-lateral a:hover {
-    background-color: #2d4fb3;
-}
-#menu-lateral h3 {
-    color: #ffefef;
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-#menu-lateral .cerrar {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 36px;
-}
-#fondo-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 900;
-}
-.link-vinieta::before{
-    content:"•";
-    color:white;
-    margin-right: 6px;
-    font-size: 18px;
-}
-/*===============================
-aqui termina el css del menu
 ================================*/
