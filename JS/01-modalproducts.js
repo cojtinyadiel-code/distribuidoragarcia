@@ -1,4 +1,4 @@
-let carrito = [];
+
 const variantesProducto = {
     
 

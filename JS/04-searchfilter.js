@@ -4,7 +4,7 @@ function filtrar() {
     let tarjetas = document.querySelectorAll(".tarjeta-producto");
 
     tarjetas.forEach(card => {
-        let titulo = card.querySelector("h3.titulo").textContent.toLowerCase();
+        let titulo = card.querySelector("h3 .titulo").textContent.toLowerCase();
         let cat = card.getAttribute("data-categoria");
 
         let coincideTexto = titulo.includes(texto);
