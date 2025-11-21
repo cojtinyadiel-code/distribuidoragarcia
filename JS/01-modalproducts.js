@@ -4,13 +4,13 @@ const variantesProducto = {
 
     "producto1": [
         { 
-            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
-            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgMini: "images/aguja-apple-caja-abierta.jpg",
+            imgGrande: "images/aguja-apple-caja-abierta.jpg",
             precio: 18.50
         },
         { 
-            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
-            imgGrande: "images/",
+            imgMini: "images/aguja-apple-caja-abierta.jpg",
+            imgGrande: "images/aguja-apple-caja-abierta.jpg",
             precio: 19.00
         }
     ],
