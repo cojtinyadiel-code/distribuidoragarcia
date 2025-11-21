@@ -334,10 +334,6 @@ BUSCADOR DE "PRODUCTOS"
 }
 
 
-.btnmdl-carrito{
-
-}
-
 .search-container button:hover, .btn-cerrar:hover, .btnmdl-carrito:hover{
     background: #1E3A8A;
     color: #ffffff;
@@ -474,8 +470,8 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 23px;
 }
 
-.modal {
-    margin_top:40px;
+.modal{
+    margin-top:40px;
     background: rgb(255, 255, 255);
     padding:20px;
     border-radius: 12px;
@@ -501,7 +497,7 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 5px;
     color: black;
 }
-#cantidadPersonalizada:{
+#cantidadPersonalizada{
     width: 50px;
     border: 2px solid #1E3A8A;
     border-radius: 5px;
