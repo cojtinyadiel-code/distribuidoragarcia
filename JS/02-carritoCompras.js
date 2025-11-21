@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
      * Configuración de variantes (ejemplo)
      * Ajusta rutas y productos según tu carpeta de imágenes
      ***********************/
+//Codigo a seguir para productos y sus variantes
+
     const variantesProducto = {
         "producto1": [
-            { imgMini: "images/aguja chaquira pony/aguja-chaquira-no-12.jpg", imgGrande: "images/aguja chaquira pony/aguja-chaquira-no-12.jpg", precio: 18.50 },
+            { imgMini: "/images/aguja apple/aguja-apple-09.jpg", imgGrande: "/images/aguja apple/aguja-apple-09.jpg", precio: 18.50 },
             { imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2", imgGrande: "https://via.placeholder.com/300x220/ff7777/000000?text=A2", precio: 19.00 }
         ],
         "producto2": [

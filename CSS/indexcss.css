@@ -281,8 +281,8 @@
     padding-top: 60px;
     z-index: 1000;
     box-sizing: border-box;
-    border-radius: 8px 0 0 8px;
-    border-right: 3px solid #ffefef; 
+    border-top-right-radius: 45px;
+    border-right: 3px solid #102357; 
 }
 #menu-lateral a {
     padding: 12px 20px;
