@@ -1,0 +1,99 @@
+<div class="tarjeta-producto" id="producto1" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto2" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto3" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto4" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto5" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto6" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto7" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto8" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto9" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="tarjeta-producto" id="producto10" data-categoria="" data-precio=""> 
+    <div class="imagen-producto">
+        <div class=""><img src=""></div>
+    </div>
+    <div class="info-producto">
+        <h3 class="titulo"></h3>
+        <p></p>
+    </div>
+</div>

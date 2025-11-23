@@ -128,7 +128,7 @@
         }
         
         /* =========================
-        SECCIÓN DE PRODUCTOS
+        SECCIÓN DE 
         ========================= */
 
         .titulo-seccion {
@@ -170,22 +170,6 @@
             flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 30px;
-        }
-        
-        .boton-categoria {
-            background-color: white;
-            border: 2px solid #1E3A8A;
-            color: #1E3A8A;
-            padding: 10px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        .boton-categoria:hover, .boton-categoria.activo {
-            background-color: #1E3A8A;
-            color: white;
         }
         
  /*===============================
@@ -262,7 +246,6 @@ aqui termina el css del menu
 BUSCADOR DE "PRODUCTOS"
 */
 .search-container {
-    width: auto;
     max-width: 500px;
     margin: 20px auto;
     padding: 14px 20px;
@@ -272,27 +255,29 @@ BUSCADOR DE "PRODUCTOS"
     display: flex;
     gap: 10px;
     align-items: center;
-    height: 65px;
+    height: 55px;
+    justify-content: center;
+    display: flex;
+    margin: auto;
 }
 .search-container h2{
-    margin-bottom: 5px;
-    font-size:48px;
+    margin-bottom: 0.2em;
+    font-size:2.2em;
     font-weight: bold;
     color: #dbdbdbb9;
-    text-shadow: 0 80px 2px white; 
 }
 
 .search-container input {
     flex: 1;
-    padding: 10px 15px;
+    padding: 0.5em 0.7em;
     border: none;
-    border-radius: 12px;
+    border-radius: 0.8em;
     font-size: 15px;
     color: #1E3A8A;
     background: #ffffff;
     outline: none;
-    transition: 0.2s ease;
     width: 80px;
+
 }
 
 .search-container input:focus{
@@ -316,8 +301,8 @@ BUSCADOR DE "PRODUCTOS"
     transform: scale(1.05);
 }
 
-.search-container button, .btn-cerrar, .btnmdl-carrito, .kindele, .cosprice, #cantidadPersonalizada {
-    padding: 10px 16px;
+.search-container button, .btn-cerrar, .btnmdl-carrito, .kindele, .cosprice, #cantidadPersonalizada, .btn-mostrar-mas {
+    padding: 0.7em 1em;
     background: #ffffff;
     border: none;
     border-radius: 12px;
@@ -327,33 +312,48 @@ BUSCADOR DE "PRODUCTOS"
     transition: 0.3s ease;
 }
 .search-container select{
-    padding: 10px 5px;
+    padding: 0.5em 0.4em;
     width: 85px;
     text-align: left;
+    border-radius: 0.5em;
 }
 
 
-.search-container button:hover, .btn-cerrar:hover, .btnmdl-carrito:hover{
+.search-container button:hover, .btn-cerrar:hover, .btnmdl-carrito:hover, {
     background: #1E3A8A;
     color: #ffffff;
     transform: scale(1.08);
 }
 
+#btn-mas {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 25px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    z-index: 999;
+}
 
-@media (max-width: 480px) {
-    .search-container {
-        flex-direction: column;
-        padding: 18px;
-    }
+/* Cuando el botón está “empujado” hacia arriba porque llegó el footer */
+#btn-mas.stop {
+    position: absolute;
+    bottom: 20px;
+}
 
-    .search-container button {
-        width: 100%;
-    }
+
+.btn-mostrar-mas:hover{
+    background: #aaaaaad0;
 }
 
 /* Tarjetas DE PRODUCTOS y funcionalidad de variantes (MODALES)*/
-
-#productos {
+.lista-productos, .hideproducts{
     width: 100%;
     display: flex;
     flex-wrap: wrap;        
@@ -362,6 +362,12 @@ BUSCADOR DE "PRODUCTOS"
     margin: auto;
 }
 
+.oculto{
+    display: none;
+    flex-wrap: wrap;        
+    justify-content: center; 
+    gap:20px;
+}
 
 .tarjeta-producto {
     width: 290px;
@@ -381,7 +387,6 @@ BUSCADOR DE "PRODUCTOS"
 .tarjeta-producto:hover { 
     transform: translateY(-8px);
     transition: 0.4s ease;
-
     box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.467);
 }
 
@@ -429,12 +434,12 @@ input[type=number]::-webkit-outer-spin-button {
     padding:3px 3px;
 }
 
-
 #modalCantidad input.focus{
     background-color: rgb(255, 255, 255);
     border-color: none;
     padding:3px 3px;
 }
+
 .imagen-producto img {
     padding:1px 0;
     background: #ffffff ;
@@ -556,157 +561,157 @@ input[type=number]::-webkit-outer-spin-button {
     margin-left: 10px;
 }
 
-/*===============================
-el carrito jusjas
-================================*/
-.carrito-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 900;
-    opacity: 0;
-    transition: 0.3s ease;
-}
+        /*===============================
+        el carrito jusjas
+        ================================*/
+        .carrito-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 900;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
 
 
-.carrito-panel {
-    position: fixed;
-    top: 0;
-    right: -350px;
-    width: 320px;
-    height: 100%;
-    background:  #1E3A8A;
-    z-index: 1000;
-    padding: 20px;
-    box-sizing: border-box;
-    border-left: 3px solid #ffefef;
-    border-radius: 8px 0 0 8px;
-    box-shadow: -4px 0 15px rgba(0,0,0,0.25);
-    transition: 0.35s ease-in-out;
-    display: flex;
-    flex-direction: column;
-}
+        .carrito-panel {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 320px;
+            height: 100%;
+            background:  #1E3A8A;
+            z-index: 1000;
+            padding: 20px;
+            box-sizing: border-box;
+            border-left: 3px solid #ffefef;
+            border-radius: 8px 0 0 8px;
+            box-shadow: -4px 0 15px rgba(0,0,0,0.25);
+            transition: 0.35s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+        .carrito-panel:
 
 
-.carrito-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.carrito-header h2 {
-    color: #fff;
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
-}
+        .carrito-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .carrito-header h2 {
+            color: #fff;
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
 
-.cerrar-icon {
-    background: none;
-    color: #fff;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.cerrar-icon:hover {
-    color: #ff7979;
-}
+        .cerrar-icon {
+            background: none;
+            color: #fff;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .cerrar-icon:hover {
+            color: #ff7979;
+        }
 
 
-.carrito-items {
-    margin-top: 20px;
-    flex: 1;
-    overflow-y: auto;
-}
+        .carrito-items {
+            margin-top: 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
 
-.carrito-item {
-    background: #122b57;
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    color: #e0e8ff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .carrito-item {
+            background: #122b57;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            color: #e0e8ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.carrito-item button {
-    background: #ff4d4d;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    color: white;
-    font-size: 12px;
-}
+        .carrito-item button {
+            background: #ff4d4d;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            font-size: 12px;
+        }
 
-.carrito-footer {
-    border-top: 1px solid #ffffff44;
-    padding-top: 15px;
-    color: white;
-}
+        .carrito-footer {
+            border-top: 1px solid #ffffff44;
+            padding-top: 15px;
+            color: white;
+        }
 
-.carrito-footer p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
+        .carrito-footer p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
 
-.carrito-pagar {
-    width: 100%;
-    padding: 12px;
-    background: #1c4bff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.carrito-pagar:hover {
-    background: #163dcc;
-}
+        .carrito-pagar {
+            width: 100%;
+            padding: 12px;
+            background: #1c4bff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .carrito-pagar:hover {
+            background: #163dcc;
+        }
 
-.btn-carrito {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    background: #061a69;
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 1100;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    transition: 0.3s;
-}
+        .btn-carrito {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: #061a69;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: 0.3s;
+        }
 
-.btn-carrito:hover {
-    background: #01145a;
-    transform: scale(1.07);
-}
+        .btn-carrito:hover {
+            background: #01145a;
+            transform: scale(1.07);
+        }
 
-.panel-front{
-    width: 100%;
-    background: black;
-}
+        .panel-front{
+            width: 100%;
+            background: black;
+        }
 
-.lista-carrito{
-    color: white;
-    padding: 10px 20px;
-    text-decoration: underline;
-    position: relative;
-    font-size: 15px;
-}
+        .lista-carrito{
+            color: white;
+            padding: 10px 20px;
+            text-decoration: underline;
+            position: relative;
+            font-size: 15px;
+        }
 
-        
         /* =========================
-           FOOTER
+        FOOTER
         ========================= */
         footer {
             background-color: #333;
@@ -731,6 +736,7 @@ el carrito jusjas
             font-size: 1.2rem;
             text-decoration: none;
         }
+
         
         /* =========================
            RESPONSIVE
@@ -751,4 +757,12 @@ el carrito jusjas
             .rejilla-productos {
                 grid-template-columns: 1fr;
             }
-        }
+
+            .search-container {
+                    flex-direction: column;
+                    padding: 18px;
+            }
+            .search-container button {
+                    width: 100%;
+                }
+            }
