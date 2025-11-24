@@ -770,15 +770,16 @@ input[type=number]::-webkit-outer-spin-button {
                 font-size: 2.2rem;
             }
             
-            .rejilla-productos {
+            .contenido-encabezado {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+
+            
+            .lista-productos {
                 grid-template-columns: 1fr;
             }
-
-            .search-container {
-                    flex-direction: column;
-                    padding: 18px;
-            }
-            .search-container button {
-                    width: 100%;
-                }
-            }
+        }
+    }
