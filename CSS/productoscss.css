@@ -331,8 +331,8 @@ BUSCADOR DE "PRODUCTOS"
     left: 50%;
     transform: translateX(-50%);
     padding: 6px 25px;
-    background: #111;
-    color: white;
+    background: #122b57;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -709,6 +709,18 @@ input[type=number]::-webkit-outer-spin-button {
             position: relative;
             font-size: 15px;
         }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tarjeta {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #ccc;
+            padding: 20px;
+        }
+
 
         /* =========================
         FOOTER
@@ -738,31 +750,19 @@ input[type=number]::-webkit-outer-spin-button {
         }
 
         
-        /* =========================
-           RESPONSIVE
-        ========================= */
-        @media (max-width: 768px) {
-            .contenido-encabezado {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                margin-top: 15px;
-            }
-            
-            .seccion-hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .rejilla-productos {
-                grid-template-columns: 1fr;
+
+
+            /* Móviles */
+            @media (max-width: 600px) {
+                .tarjeta {
+                    flex: 1 1 100%;
+                }
             }
 
-            .search-container {
-                    flex-direction: column;
-                    padding: 18px;
-            }
-            .search-container button {
-                    width: 100%;
+
+            /* Tablets */
+            @media (min-width: 601px) and (max-width: 1024px) {
+                .tarjeta {
+                    flex: 1 1 50%;
                 }
             }
