@@ -7,7 +7,7 @@
             position: sticky; 
             top: 0;
             z-index: 100;
-            box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2vh 6vh rgba(0, 0, 0, 0.2);
         }
         * {
             margin: 0; 
@@ -19,12 +19,12 @@
         body {
             background-color: #ffffff;
             color: #333;
-            line-height: 1.6em;
+            line-height: 3.8vh;
         }
 
         .contenedor {
             width: 100%;
-            max-width: 74em;
+            max-width: 180vh;
             margin: 0 auto;
         }
 
@@ -41,14 +41,13 @@
         }
         
         .logo-circulo {
-            width: 3.8em;
-            height: 3.8em;
+            width: 10vh;
+            height: 10vh;
             background-color: white;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-right: 1em;
             font-weight: bold;
             color: #1E3A8A;
             border: 0.19em solid #DC2626;
@@ -56,8 +55,9 @@
         
         .texto-logo {
             color: white;
-            font-size: 1.6em;
+            font-size: 3vh;
             font-weight: bold;
+            margin-left:4vh ;
         }
         
         nav ul {
@@ -66,16 +66,17 @@
         }
         
         nav ul li {
-            margin-left: 1em;
+            margin-left: 4vh;
         }
         
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 0.4em 0.6em;
-            border-radius: 0.2em;
+            padding: 4vh 4vh;
+            border-radius: 3vh;
             transition: background-color 0.3s;
             font-weight: bold;
+            margin-right: none;
         }
         
         nav ul li a:hover {
@@ -88,13 +89,13 @@
         MENÚ DESPLEGABLE
         ================================*/
         #boton-menu {
-            font-size: 30px;
+            font-size: 5vh;
             cursor: pointer;
-            padding: 10px 15px;
+            padding: 1.5vh 1vh;
             color: white;
             position: fixed;
-            left: 20px;
-            top: 26px;
+            left: 4vh;
+            top: 4.3vh;
             z-index: 999;
         }
         #menu-lateral {
@@ -106,28 +107,28 @@
             background-color: #1E3A8A;
             overflow-x: hidden;
             transition: 0.4s;
-            padding-top: 60px;
+            padding-top: 5vh;
             z-index: 1000;
             box-sizing: border-box;
-            border-top-right-radius: 45px;
+            border-top-right-radius: 6vh;
             border-right: 3px solid #102357; 
         }
         #menu-lateral a {
-            padding: 12px 20px;
+            padding: 1vh 2vh;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 1.1em;
             color: white;
             display: block;
             font-weight: bold;
         }
+
         #menu-lateral a:hover {
             background-color: #2d4fb3;
-            border-left: 3px solid #ffefef; 
+            border-left: 0.5vh solid #ffefef; 
         }
         #menu-lateral h3 {
             color: #ffefef;
-            margin-left: 20px;
-            margin-bottom: 10px;
+            margin: 2vh 0 0 2vh;
         }
         #menu-lateral .cerrar {
             position: absolute;
@@ -372,8 +373,9 @@ BUSCADOR DE "PRODUCTOS"
 }
 
 .tarjeta-producto {
+
     width: 290px;
-    height: 370px;
+    height: 390px;
     background: #ffffff;
     cursor: pointer;
     display: flex;
@@ -416,6 +418,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .img-shadow img{
+
     width: 100%;
     display: block;
 
@@ -454,12 +457,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .info-producto h3 { 
     margin: 10px;
-    margin-top:0px;
+    margin-top:10px;
     margin-bottom: 0;
     color: #1E3A8A;
 }
 
 .info-producto p { 
+    box-sizing: border-box;
     margin: 10px; 
     color: #000000b7;
 }
