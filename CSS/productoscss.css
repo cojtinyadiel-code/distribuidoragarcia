@@ -24,13 +24,9 @@
 
         .contenedor {
             width: 100%;
-            max-width: 70em;
+            max-width: 74em;
             margin: 0 auto;
         }
-        
-        /* =========================
-        ENCABEZADO Y NAVEGACIÓN
-        ========================= */
 
         
         .contenido-encabezado {
@@ -45,22 +41,22 @@
         }
         
         .logo-circulo {
-            width: 60px;
-            height: 60px;
+            width: 3.8em;
+            height: 3.8em;
             background-color: white;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-right: 15px;
+            margin-right: 1em;
             font-weight: bold;
             color: #1E3A8A;
-            border: 2px solid #DC2626;
+            border: 0.19em solid #DC2626;
         }
         
         .texto-logo {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.6em;
             font-weight: bold;
         }
         
@@ -70,14 +66,14 @@
         }
         
         nav ul li {
-            margin-left: 20px;
+            margin-left: 1em;
         }
         
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 5px;
+            padding: 0.4em 0.6em;
+            border-radius: 0.2em;
             transition: background-color 0.3s;
             font-weight: bold;
         }
@@ -86,6 +82,79 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
         
+        
+                
+        /*===============================
+        MENÚ DESPLEGABLE
+        ================================*/
+        #boton-menu {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px 15px;
+            color: white;
+            position: fixed;
+            left: 20px;
+            top: 26px;
+            z-index: 999;
+        }
+        #menu-lateral {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #1E3A8A;
+            overflow-x: hidden;
+            transition: 0.4s;
+            padding-top: 60px;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-top-right-radius: 45px;
+            border-right: 3px solid #102357; 
+        }
+        #menu-lateral a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            font-weight: bold;
+        }
+        #menu-lateral a:hover {
+            background-color: #2d4fb3;
+            border-left: 3px solid #ffefef; 
+        }
+        #menu-lateral h3 {
+            color: #ffefef;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        #menu-lateral .cerrar {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 36px;
+        }
+        #fondo-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 900;
+        }
+        .link-vinieta::before{
+            content:"•";
+            color:white;
+            margin-right: 6px;
+            font-size: 18px;
+        }
+        /* =========================
+        ENCABEZADO Y NAVEGACIÓN
+        ========================= */
+
         /* =========================
         HERO / PORTADA
         ========================= */
@@ -171,74 +240,7 @@
             gap: 15px;
             margin-bottom: 30px;
         }
-        
- /*===============================
-   MENÚ DESPLEGABLE
-================================*/
-#boton-menu {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px 15px;
-    color: white;
-    position: fixed;
-    left: 20px;
-    top: 15px;
-    z-index: 999;
-}
-#menu-lateral {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #1E3A8A;
-    overflow-x: hidden;
-    transition: 0.4s;
-    padding-top: 60px;
-    z-index: 1000;
-    box-sizing: border-box;
-    border-top-right-radius: 45px;
-    border-right: 3px solid #102357; 
-}
-#menu-lateral a {
-    padding: 12px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-    font-weight: bold;
-}
-#menu-lateral a:hover {
-    background-color: #2d4fb3;
-    border-left: 3px solid #ffefef; 
-}
-#menu-lateral h3 {
-    color: #ffefef;
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-#menu-lateral .cerrar {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 36px;
-}
-#fondo-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 900;
-}
-.link-vinieta::before{
-    content:"•";
-    color:white;
-    margin-right: 6px;
-    font-size: 18px;
-}
+
 /*===============================
 aqui termina el css del menu
 ================================*/
@@ -451,8 +453,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .info-producto h3 { 
-    margin: 20px;
-    margin-top:2px;
+    margin: 10px;
+    margin-top:0px;
     margin-bottom: 0;
     color: #1E3A8A;
 }
