@@ -36,6 +36,7 @@
         }
         
         .logo {
+            margin-left: 5vh;
             display: flex;
             align-items: center;
         }
@@ -72,9 +73,9 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 4vh 4vh;
-            border-radius: 3vh;
-            transition: background-color 0.3s;
+            padding: 1vh 1vh;
+            border-radius: 1vh;
+            transition: background-color 0.2s;
             font-weight: bold;
             margin-right: none;
         }
@@ -120,6 +121,7 @@
             color: white;
             display: block;
             font-weight: bold;
+            padding-left: 5vh;
         }
 
         #menu-lateral a:hover {
@@ -129,6 +131,7 @@
         #menu-lateral h3 {
             color: #ffefef;
             margin: 2vh 0 0 2vh;
+            padding-left: 2vh;
         }
         #menu-lateral .cerrar {
             position: absolute;
@@ -147,7 +150,7 @@
             z-index: 900;
         }
         .link-vinieta::before{
-            content:"•";
+            content:"-";
             color:white;
             margin-right: 6px;
             font-size: 18px;
@@ -221,26 +224,6 @@
             border-radius: 2px;
         }
         
-        .rejilla-productos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        /* =========================
-        SECCIÓN DE CATEGORÍAS
-        ========================= */
-        .categorias {
-            padding: 40px 0;
-            background-color: #ffffff;
-        }
-        
-        .botones-categorias {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
 
 /*===============================
 aqui termina el css del menu
@@ -628,7 +611,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
         .carrito-items {
-            margin-top: 20px;
+            margin-top: 0px;
             flex: 1;
             overflow-y: auto;
         }
@@ -682,8 +665,8 @@ input[type=number]::-webkit-outer-spin-button {
 
         .btn-carrito {
             position: fixed;
-            top: 100px;
-            right: 20px;
+            top: 26vh;
+            right: 3.5vh;
             background: #061a69;
             color: white;
             padding: 14px;
