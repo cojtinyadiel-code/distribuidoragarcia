@@ -6,7 +6,7 @@
             padding: 15px 0;
             position: sticky; 
             top: 0;
-
+            z-index: 100;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         * {
@@ -20,6 +20,11 @@
             background-color: #ffffff;
             color: #333;
             line-height: 1.6;
+        }
+        .block{
+            max-width:1400px;
+
+
         }
         
         .contenedor {
@@ -319,7 +324,7 @@ BUSCADOR DE "PRODUCTOS"
 }
 
 
-.search-container button:hover, .btn-cerrar:hover, .btnmdl-carrito:hover, {
+.search-container button:hover, .btn-cerrar:hover, .btnmdl-carrito:hover {
     background: #1E3A8A;
     color: #ffffff;
     transform: scale(1.08);
@@ -360,6 +365,8 @@ BUSCADOR DE "PRODUCTOS"
     justify-content: center; 
     gap: 20px;               
     margin: auto;
+    flex-grow: 1;
+    flex-basis:0;
 }
 
 .oculto{
@@ -595,8 +602,6 @@ input[type=number]::-webkit-outer-spin-button {
             display: flex;
             flex-direction: column;
         }
-        .carrito-panel:
-
 
         .carrito-header {
             display: flex;
@@ -749,17 +754,31 @@ input[type=number]::-webkit-outer-spin-button {
             text-decoration: none;
         }
 
-            /* Móviles */
-            @media (max-width: 600px) {
-                body {
-                    flex: 1 1 100%;
-                }
+                    /* =========================
+           RESPONSIVE
+        ========================= */
+        @media (max-width: 768px) {
+            .contenido-encabezado {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            .seccion-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .rejilla-productos {
+                grid-template-columns: 1fr;
             }
 
-
-            /* Tablets */
-            @media (min-width: 601px) and (max-width: 1024px) {
-                body {
-                    flex: 1 1 50%;
+            .search-container {
+                    flex-direction: column;
+                    padding: 18px;
+            }
+            .search-container button {
+                    width: 100%;
                 }
             }
