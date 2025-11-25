@@ -364,7 +364,7 @@ BUSCADOR DE "PRODUCTOS"
     justify-content: center;
     margin-top: 3vh;
     width: 22vw;
-    height: clamp(30vh, 40vh,30vh);
+    height: 26vh;
     background: #ffffff;
     cursor: pointer;
     display: flex;
@@ -447,8 +447,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 .info-producto h3 {
     box-sizing: border-box;
-    font-size: clamp(0.1rem, 4vw, 1rem);
-    margin: 2vw 1.8vh;
+    font-size: clamp(0.005rem, 3.4vw, 1rem);
+    margin: 2vw 0.9vh;
+    line-height: 1.3em;
     color: #1E3A8A;
 }
 
