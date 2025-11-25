@@ -1,4 +1,3 @@
-
 // Elementos del modal
 const modal = document.getElementById("modalCompra");
 const modalImg = document.getElementById("modalImg");
@@ -8,209 +7,260 @@ const listaVariantes = document.getElementById("listaVariantes");
 const cerrarModal = document.getElementById("cerrarModal");
 const btnAgregarCarrito = document.getElementById("btnAgregarCarrito");
 
-    const variantesProducto = {
+alert("Puedes desplazar las tarjetas de productos <br> para ver su descripción.");
+
+const variantesProducto = {
     "producto0": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto1": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto2": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto3": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto4": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto5": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto6": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto7": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto8": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto9": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto10": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto11": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto12": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto13": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto14": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto15": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto16": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto17": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto18": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto19": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto20": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto21": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto22": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto23": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto24": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto25": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto26": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto27": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto28": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto29": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto30": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto31": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto32": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto33": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto34": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto35": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto36": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto37": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto38": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto39": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto40": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto41": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto42": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto43": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto44": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto45": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto46": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto47": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto48": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
     ],
     "producto49": [
-        { imgMini: "", imgGrande: "", precio: "" },
+        { imgMini: "images/aguja apple/aguja-apple-caja.jpg", imgGrande: "images/aguja apple/aguja-apple-caja.jpg", precio: "20.2" },
+        // ESTA SEGUNDA VARIANTE SERÁ IGNORADA AUTOMÁTICAMENTE
         { imgMini: "", imgGrande: "", precio: "" }
-    ]
-}
-
+    ],
+};
 
 let productoActual = {
     id: null,
@@ -224,7 +274,6 @@ let productoActual = {
 // SISTEMA AUTOMÁTICO PARA TODAS LAS TARJETAS
 // =======================================
 document.querySelectorAll(".tarjeta-producto").forEach(tarjeta => {
-
     tarjeta.addEventListener("click", () => {
 
         const id = tarjeta.id;
@@ -234,40 +283,49 @@ document.querySelectorAll(".tarjeta-producto").forEach(tarjeta => {
         productoActual.id = id;
         productoActual.nombre = nombre;
 
-        // Cargar imagen principal de la tarjeta
-        const img = tarjeta.querySelector(".imagen-producto img").src;
-        modalImg.src = img;
-
         modalNombre.textContent = nombre;
+
+        // Imagen principal desde la tarjeta
+        modalImg.src = tarjeta.querySelector(".imagen-producto img").src;
+
         modalPrecio.textContent = `Precio: Q. ${precio}`;
 
         listaVariantes.innerHTML = "";
 
-        // Variantes por producto
+        // Verificar si hay variantes
         if (variantesProducto[id]) {
 
-            variantesProducto[id].forEach((v, index) => {
+            // FILTRO: eliminar variantes vacías
+            const variantesValidas = variantesProducto[id].filter(v =>
+                v.imgMini !== "" && v.imgGrande !== ""
+            );
+
+            variantesValidas.forEach((v, index) => {
+
                 const btn = document.createElement("div");
                 btn.classList.add("var-opcion");
 
                 btn.innerHTML = `<img src="${v.imgMini}">`;
 
+                // Primera variante → seleccionada por defecto
                 if (index === 0) {
                     btn.classList.add("seleccionada");
                     modalImg.src = v.imgGrande;
                     modalPrecio.textContent = `Precio: Q. ${v.precio}`;
-
                     productoActual.variante = v;
                 }
 
-
                 btn.addEventListener("click", () => {
 
-                    document.querySelectorAll(".var-opcion").forEach(el => el.classList.remove("seleccionada"));
+                    // SOLO seleccionar variantes dentro del modal
+                    listaVariantes.querySelectorAll(".var-opcion")
+                        .forEach(el => el.classList.remove("seleccionada"));
+
                     btn.classList.add("seleccionada");
 
                     modalImg.src = v.imgGrande;
                     modalPrecio.textContent = `Precio: Q. ${v.precio}`;
+                    productoActual.variante = v;
                 });
 
                 listaVariantes.appendChild(btn);
@@ -276,22 +334,13 @@ document.querySelectorAll(".tarjeta-producto").forEach(tarjeta => {
 
         modal.style.display = "flex";
     });
-})
-
-btnAgregarCarrito.addEventListener("click", () => {
-    
-    productoActual.cantidad = parseInt(modalCantidad.value);
-
-    console.log("Producto añadido al carrito:", productoActual);
-
-    // En el futuro aquí se agregará:
-    // carrito.push({...productoActual})
-    // actualizarCarritoUI()
-
-    alert("Producto añadido al carrito ✔");
 });
 
-
+btnAgregarCarrito.addEventListener("click", () => {
+    productoActual.cantidad = parseInt(modalCantidad.value);
+    console.log("Producto añadido al carrito:", productoActual);
+    alert("Producto añadido al carrito ✔");
+});
 
 // Cerrar modal
 cerrarModal.addEventListener("click", () => {
