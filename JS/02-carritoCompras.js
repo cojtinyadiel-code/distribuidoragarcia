@@ -2,6 +2,7 @@
    Pegar este archivo en JS/02-carritocompras.js y cargarlo al final del <body>
 */
 
+alert("Puedes desplazar las tarjetas de productos para ver su descripción.");
 document.addEventListener("DOMContentLoaded", () => {
 
     /***********************
@@ -10,6 +11,621 @@ document.addEventListener("DOMContentLoaded", () => {
      ***********************/
 //Codigo a seguir para productos y sus variantes
 
+const variantesProducto = {
+
+    "producto0": [
+        { 
+            imgMini: "images/",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto1": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F1",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F2",
+            precio: 13.50
+        }
+    ],
+    "producto2": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F3",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F3",
+            precio: 13.50
+        }
+    ],
+    "producto3": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F4",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F4",
+            precio: 13.50
+        }
+    ]
+    "producto4": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto5": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto6": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto7": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto8": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto9": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto10": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto11": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F1",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F2",
+            precio: 13.50
+        }
+    ],
+    "producto12": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F3",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F3",
+            precio: 13.50
+        }
+    ],
+    "producto13": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F4",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F4",
+            precio: 13.50
+        }
+    ]
+    "producto14": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto15": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto16": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto17": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto18": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto19": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto20": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+  "producto21": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F1",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F2",
+            precio: 13.50
+        }
+    ],
+    "producto22": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F3",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F3",
+            precio: 13.50
+        }
+    ],
+    "producto23": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F4",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F4",
+            precio: 13.50
+        }
+    ]
+    "producto24": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto25": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto26": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto27": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto28": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto29": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto30": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+  "producto31": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F1",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F2",
+            precio: 13.50
+        }
+    ],
+    "producto32": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F3",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F3",
+            precio: 13.50
+        }
+    ],
+    "producto33": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F4",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F4",
+            precio: 13.50
+        }
+    ]
+    "producto34": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto35": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto36": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto37": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto38": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto39": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto40": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+  "producto41": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F1",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F2",
+            precio: 13.50
+        }
+    ],
+    "producto42": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F3",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F3",
+            precio: 13.50
+        }
+    ],
+    "producto43": [
+        { 
+            imgMini: "images/aguja chaquira pony",
+            imgGrande: "https://via.placeholder.com/300x220/aaffaa/000000?text=Fino+F4",
+            precio: 12.90
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/88dd88/000000?text=F2",
+            imgGrande: "https://via.placeholder.com/300x220/88dd88/000000?text=Fino+F4",
+            precio: 13.50
+        }
+    ]
+    "producto44": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto45": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto46": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto47": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto48": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto49": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+    "producto50": [
+        { 
+            imgMini: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            imgGrande: "images/caja-ramitos-blancos-o-chapulines.jpg",
+            precio: 18.50
+        },
+        { 
+            imgMini: "https://via.placeholder.com/70x70/ff7777/000000?text=A2",
+            imgGrande: "images/",
+            precio: 19.00
+        }
+    ],
+};
 
 
         // Agrega más productos/variantes aquí con las claves que uses en tus tarjetas (id="productoX")
