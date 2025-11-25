@@ -240,7 +240,7 @@ BUSCADOR DE "PRODUCTOS"
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
     gap: 1.8vh;
     align-items: center;
-    height: 55px;
+    height: 6.9vh;
     justify-content: center;
     display: flex;
     margin: auto;
@@ -256,8 +256,8 @@ BUSCADOR DE "PRODUCTOS"
     flex: 1;
     padding: 0.5em 0.7em;
     border: none;
-    border-radius: 8px;
-    font-size: 15px;
+    border-radius: 4px;
+    font-size: 0.7em;
     color: #1E3A8A;
     background: #ffffff;
     outline: none;
@@ -297,9 +297,13 @@ BUSCADOR DE "PRODUCTOS"
     transition: 0.3s ease;
 }
 .search-container select{
-    padding: 0.5em 0.4em;
-    width: 85px;
+    height: 2em;
+    padding: 0;
+    padding-left: 0.4em;
+    margin: 0;
+    width: 5.5em;
     text-align: left;
+    font-size: smaller;
     border-radius: 0.5em;
 }
 
@@ -312,16 +316,16 @@ BUSCADOR DE "PRODUCTOS"
 
 #btn-mas {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
+    bottom: 2em;
+    left: 88%;
     transform: translateX(-50%);
-    padding: 6px 25px;
+    padding: 1vh 2vh;
     background: #122b57;
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 2.5vh;
     transition: 0.3s ease;
     z-index: 999;
 }
@@ -329,12 +333,12 @@ BUSCADOR DE "PRODUCTOS"
 /* Cuando el botón está “empujado” hacia arriba porque llegó el footer */
 #btn-mas.stop {
     position: absolute;
-    bottom: 20px;
+    bottom: 2vh;
 }
 
 
-.btn-mostrar-mas:hover{
-    background: #aaaaaad0;
+#btn-mas:hover{
+    background: #122b5798;
 }
 
 /* Tarjetas DE PRODUCTOS y funcionalidad de variantes (MODALES)*/
@@ -342,7 +346,7 @@ BUSCADOR DE "PRODUCTOS"
     width: 100%;
     display: flex;
     flex-wrap: wrap;        
-    gap: 20px;               
+    gap: 1.6vw;               
     margin: auto;
     text-align: center;
     align-items: center;
@@ -357,8 +361,12 @@ BUSCADOR DE "PRODUCTOS"
 }
 
 .tarjeta-producto {
-    width: 45vh;
-    height: 68vh;
+    box-sizing: border-box;
+    margin-top: 50px;
+    font-size: 1em ;
+    line-height: 1.2em;
+    width: 22vw;
+    height: 30vw;
     background: #ffffff;
     cursor: pointer;
     display: flex;
@@ -368,6 +376,8 @@ BUSCADOR DE "PRODUCTOS"
     transition: 0.2s ease;
     border-radius: 8px;
     box-shadow: 0 0 30px 2px rgba(168, 168, 168, 0.884);
+    overflow: hidden;
+    padding: 0 0 vh 0;
 }
 
 
@@ -393,7 +403,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .img-shadow{
     position: relative;
-    width: 300px;
+    width: 40vw;
     border-radius: 10px;
     border-bottom-right-radius:none;
     border-bottom-left-radius:none;
