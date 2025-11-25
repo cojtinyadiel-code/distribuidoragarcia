@@ -456,8 +456,8 @@ input[type=number]::-webkit-outer-spin-button {
 .info-producto p { 
     box-sizing: border-box;
     margin: auto; 
-    font-size: 1em;
-    margin: 2.7em 0.5vw;
+    font-size: clamp(0.005rem, 3.4vw, 1rem);
+    margin: 3.5em 0.5vw;
     margin-right: 2vh;
     color: #000000b7;
     line-height: 1.3em;
