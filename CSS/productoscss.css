@@ -361,12 +361,10 @@ BUSCADOR DE "PRODUCTOS"
 }
 
 .tarjeta-producto {
-    box-sizing: border-box;
     justify-content: center;
-    margin-top: 8vh;
-    line-height: 1.2em;
+    margin-top: 3vh;
     width: 22vw;
-    height: 30vw;
+    height: clamp(30vh, 40vh,30vh);
     background: #ffffff;
     cursor: pointer;
     display: flex;
@@ -397,9 +395,9 @@ input[type=number]::-webkit-outer-spin-button {
 .imagen-producto {
     background: transparent;
     width: 100%;
-    height: 40%;
+    height: 50%;
     display: flex;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .img-shadow{
@@ -448,17 +446,20 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .info-producto h3 {
-    font-size: 1.2em;
-    margin: 2vh 1.8vw;
+    box-sizing: border-box;
+    font-size: clamp(0.1rem, 4vw, 1rem);
+    margin: 2vw 1.8vh;
     color: #1E3A8A;
 }
 
 .info-producto p { 
     box-sizing: border-box;
     margin: auto; 
+    font-size: 1em;
     margin: 2.7em 0.5vw;
     margin-right: 2vh;
     color: #000000b7;
+    line-height: 1.3em;
 }
 
 .modal-fondo {
